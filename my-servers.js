@@ -14,10 +14,10 @@ function handleBad(req, resp){
 var serverGood = http.createServer(handleGood);
 var serverBad = http.createServer(handleBad);
 
-goodServer.listen(GOOD_PORT, function(){
-    console.log("listening on: http://localhost:" + PORT);
-})
+serverGood.listen(GOOD_PORT, function(){
+    console.log("listening on: http://localhost:" + GOOD_PORT);
+});
 
-badServer.listen(BAD_PORT, function(){
-    console.log("listening on: http://localhost:" + PORT);
-})
+serverBad.listen(BAD_PORT, function(){
+    console.log("listening on: http://localhost:" + BAD_PORT);
+});
